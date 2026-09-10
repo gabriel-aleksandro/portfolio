@@ -1,0 +1,297 @@
+/* ── RESET & BASE ── */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	line-height: 1.5;
+}
+
+/* ── VARIÁVEIS ── */
+:root {
+	--color-background: #0F1117;
+	--color-surface: #181B23;
+	--color-text: #E8EAF0;
+	--color-muted: #94A3B8;
+	--color-primary: #4F8EF7;
+	--color-secondary: #A78BFA;
+	--content-width: 1120px;
+	--section-spacing: 4rem;
+	--border-radius: 0.5rem;
+}
+
+/* ── TIPOGRAFIA ── */
+body {
+	background: var(--color-background);
+	color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-bottom: 1rem;
+}
+
+p {
+	color: var(--color-muted);
+}
+
+a {
+	color: var(--color-primary);
+}
+
+/* ── LAYOUT ── */
+.container {
+	margin: 0 auto;
+	max-width: var(--content-width);
+	padding: 0 1.5rem;
+}
+
+section {
+	padding: var(--section-spacing) 0;
+}
+
+.cards-grid,
+.projects-grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+/* ── NAV ── */
+header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: rgba(15, 17, 23, 0.85);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid var(--color-secondary);
+	padding: 1rem 0;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	max-width: var(--content-width);
+
+}
+
+.logo {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: var(--color-text);
+	letter-spacing: -0.02rem;
+}
+
+.logo span {
+	color: var(--color-primary);
+}
+
+nav ul {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+	align-items: center;
+}
+
+nav a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+	position: relative;
+	padding: 0.5rem;
+}
+
+nav a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: var(--color-primary);
+	transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+	width: 100%;
+}
+
+nav a:hover {
+	color: var(--color-primary);
+}
+
+/* ── HERO ── */
+.hero {
+	text-align: center;
+	min-height: 100vh;
+}
+
+.hero-content {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 2rem 1.5rem;
+}
+
+.hero-content h1{
+	font-size: clamp(2rem, 5vw, 3rem);
+	margin-bottom: 0.75rem;
+}
+
+.hero-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.icon-row {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.profile-image {
+	border: 3px solid var(--color-primary);
+	border-radius: 50%;
+	height: 160px;
+	object-fit: cover;
+	width: 160px;
+}
+
+.subtitle {
+	font-size: 1.25rem;
+	color: var(--color-text);
+	margin-bottom: 2rem;
+}
+
+.button-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: center;
+}
+
+.icon-btn {
+	background: var(--color-surface);
+	border-radius: var(--border-radius);
+	color: var(--color-text);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	height: 3.5rem;
+	width: 3.5rem;
+	text-decoration: none;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn:hover {
+	background: var(--color-primary);
+	color: #ffffff;
+}
+
+.btn {
+	border-radius: var(--border-radius);
+	display: inline-block;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+	background: var(--color-primary);
+	color: #ffffff;
+}
+
+.btn-secondary {
+	background: var(--color-secondary);
+	color: var(--color-text);
+}
+
+/* ── SOBRE ── */
+.about {
+	background: var(--color-surface);
+}
+
+/* ── HABILIDADES ── */
+.cards-grid {
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+	background: var(--color-surface);
+	border-radius: var(--border-radius);
+	padding: 1.5rem;
+}
+
+.card ul {
+	list-style-position: inside;
+}
+
+/* ── PROJETOS ── */
+.projects-grid {
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card {
+	border: 1px solid var(--color-secondary);
+	border-radius: var(--border-radius);
+	padding: 1.5rem;
+}
+
+.skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.skill-tag {
+	background: var(--color-secondary);
+	border-radius: var(--border-radius);
+	padding: 0.25rem 0.5rem;
+}
+
+/* ── CONTATO ── */
+.contact {
+	background: var(--color-surface);
+}
+
+.contact-info {
+	list-style: none;
+}
+
+/* ── RESPONSIVO ── */
+/* media queries no final, todas juntas */
+@media (max-width: 600px) {
+	nav ul {
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		text-align: center;
+	}
+}
