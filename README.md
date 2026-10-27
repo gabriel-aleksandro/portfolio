@@ -16,11 +16,15 @@ Personal portfolio built with HTML, CSS and JavaScript, showcasing my projects, 
 
 ## Sections
 
-- **Hero** — introduction and contact links
-- **About** — background and what I'm looking for
-- **Skills** — tech stack
-- **Projects** — selected work with links to repositories
-- **Contact** — email, LinkedIn and GitHub
+- **Hero** — name, role, summary, resume and contact links
+- **Research** — undergraduate research at FT Unicamp
+- **Projects** — course projects with role, stack and repository links
+- **Experience**
+- **Skills**
+- **Education** — degree and certifications
+- **Contact** — email, LinkedIn, GitHub and resume
+
+Available in English and Brazilian Portuguese. All text lives in `i18n/en.js` and `i18n/pt-BR.js`; add a key to both files and reference it with `data-i18n="key"` in `index.html`.
 
 ---
 
