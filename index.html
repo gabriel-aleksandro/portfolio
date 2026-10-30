@@ -181,11 +181,107 @@
 
       <section id="projects" class="reveal" aria-labelledby="projects-title">
         <div class="container">
-          <header class="section-head">
+          <header class="section-head carousel-head">
             <h2 id="projects-title" data-i18n="projects.title"></h2>
+            <div class="carousel-nav">
+              <button type="button" class="carousel-btn" data-dir="-1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.prev">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel-btn" data-dir="1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.next">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
           </header>
 
-          <div class="card-grid">
+          <div class="carousel" id="projects-track">
+            <article class="card">
+              <p class="badge" data-i18n="projects.solar.meta"></p>
+              <h3 data-i18n="projects.solar.title"></h3>
+              <dl class="details">
+                <div>
+                  <dt data-i18n="label.overview"></dt>
+                  <dd data-i18n="projects.solar.overview"></dd>
+                </div>
+                <div>
+                  <dt data-i18n="label.role"></dt>
+                  <dd data-i18n="projects.solar.role"></dd>
+                </div>
+              </dl>
+              <ul class="tags" data-i18n-attr="aria-label:label.stack">
+                <li>Python</li>
+                <li>LangChain</li>
+                <li>ChromaDB</li>
+                <li>Groq API</li>
+                <li>Gradio</li>
+                <li>Render</li>
+              </ul>
+              <!-- btn-repo comes after .actions in style.css, so its margin-top: auto pins the buttons to the card bottom -->
+              <ul class="actions btn-repo">
+                <li>
+                  <a href="https://solar-weather-assistant.onrender.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+                    <span data-i18n="projects.solar.demo"></span><span class="visually-hidden">: Solar Weather Assistant</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/gabriel-aleksandro/solar-weather-assistant" class="btn">
+                    <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                    <span data-i18n="label.repo"></span><span class="visually-hidden">: Solar Weather Assistant</span>
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <p class="badge" data-i18n="projects.cme.meta"></p>
+              <h3 data-i18n="projects.cme.title"></h3>
+              <dl class="details">
+                <div>
+                  <dt data-i18n="label.overview"></dt>
+                  <dd data-i18n="projects.cme.overview"></dd>
+                </div>
+                <div>
+                  <dt data-i18n="label.role"></dt>
+                  <dd data-i18n="projects.cme.role"></dd>
+                </div>
+              </dl>
+              <ul class="tags" data-i18n-attr="aria-label:label.stack">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>LSTM</li>
+                <li>scikit-learn</li>
+              </ul>
+              <a href="https://github.com/gabriel-aleksandro/cme-flare-prediction" class="btn btn-repo">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span data-i18n="label.repo"></span><span class="visually-hidden" data-i18n="projects.cme.repoSuffix"></span>
+              </a>
+            </article>
+
+            <article class="card">
+              <p class="badge" data-i18n="projects.metrics.meta"></p>
+              <h3 data-i18n="projects.metrics.title"></h3>
+              <dl class="details">
+                <div>
+                  <dt data-i18n="label.overview"></dt>
+                  <dd data-i18n="projects.metrics.overview"></dd>
+                </div>
+                <div>
+                  <dt data-i18n="label.role"></dt>
+                  <dd data-i18n="projects.metrics.role"></dd>
+                </div>
+              </dl>
+              <ul class="tags" data-i18n-attr="aria-label:label.stack">
+                <li>Python</li>
+                <li>GitHub API</li>
+                <li>Spearman</li>
+                <li>Kruskal-Wallis</li>
+              </ul>
+              <a href="https://github.com/gabriel-aleksandro/code-metrics-bug-effort-study" class="btn btn-repo">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span data-i18n="label.repo"></span><span class="visually-hidden" data-i18n="projects.metrics.repoSuffix"></span>
+              </a>
+            </article>
+
             <article class="card">
               <p class="badge" data-i18n="projects.adopet.meta"></p>
               <h3>AdoPet</h3>

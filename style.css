@@ -632,6 +632,77 @@ section {
   }
 }
 
+/* ── PROJECTS CAROUSEL ── */
+.carousel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* Arrows need script.js; without it the track still scrolls natively */
+.carousel-nav {
+  display: none;
+  gap: var(--space-2);
+}
+
+.js .carousel-nav {
+  display: flex;
+}
+
+.carousel-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.carousel-btn:hover:not([aria-disabled="true"]) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.carousel-btn[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* position: relative so .visually-hidden spans in off-screen cards are clipped instead of widening the page */
+.carousel {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: var(--space-5);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: var(--space-3);
+}
+
+.carousel > .card {
+  scroll-snap-align: start;
+}
+
+@media (min-width: 48rem) {
+  .carousel {
+    grid-auto-columns: calc((100% - var(--space-5)) / 2);
+  }
+}
+
+@media (min-width: 64rem) {
+  .carousel {
+    grid-auto-columns: calc((100% - 2 * var(--space-5)) / 3);
+  }
+}
+
 /* ── EXPERIENCE ── */
 .timeline {
   position: relative;
@@ -878,7 +949,8 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html,
+  .carousel {
     scroll-behavior: auto;
   }
 

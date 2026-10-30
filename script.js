@@ -97,6 +97,27 @@ if ('IntersectionObserver' in window) {
     revealed.forEach(el => el.classList.add('is-visible'));
 }
 
+// ── Projects carousel ──
+const track = document.getElementById('projects-track');
+const carouselBtns = document.querySelectorAll('.carousel-btn');
+
+// aria-disabled (not disabled) so a focused arrow keeps focus at either end
+function updateCarousel() {
+    const atStart = track.scrollLeft <= 1;
+    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+    carouselBtns[0].setAttribute('aria-disabled', String(atStart));
+    carouselBtns[1].setAttribute('aria-disabled', String(atEnd));
+}
+
+// Scroll one view's worth; scroll-snap lines the cards up and CSS handles smoothness
+carouselBtns.forEach(btn => btn.addEventListener('click', () => {
+    track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth });
+}));
+
+track.addEventListener('scroll', updateCarousel, { passive: true });
+window.addEventListener('resize', updateCarousel);
+updateCarousel();
+
 // ── Mobile nav ──
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');

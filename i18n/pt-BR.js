@@ -48,6 +48,29 @@ window.I18N["pt-BR"] = {
     "Análise da relação entre complexidade ciclomática, linhas de código e o esforço para corrigir bugs, com dados coletados de repositórios do GitHub pelas APIs REST e GraphQL. Análise estatística com correlação de Spearman e teste de Kruskal-Wallis.",
 
   "projects.title": "Projetos",
+  "projects.solar.title": "Solar Weather Assistant",
+  "projects.solar.meta": "Projeto pessoal · GenAI / RAG · Deploy público",
+  "projects.solar.overview":
+    "Assistente de IA especializado em física solar e clima espacial. Usa RAG (retrieval-augmented generation) com ChromaDB, LangChain e LLaMA para responder perguntas sobre previsão de flares e CMEs com base em artigos científicos.",
+  "projects.solar.role":
+    "Desenvolvi o pipeline RAG completo: ingestão de documentos, busca vetorial com embeddings ONNX e geração de respostas via API Groq. Deploy no Render com otimização de memória para caber no free tier (512 MB).",
+  "projects.solar.demo": "Demo ao vivo",
+  "projects.cme.title": "Previsão de CMEs com deep learning",
+  "projects.cme.meta": "Iniciação científica · UNICAMP/CNPq · Em andamento",
+  "projects.cme.overview":
+    "Rede LSTM bidirecional com mecanismo de atenção para prever ejeções de massa coronal (CMEs) a partir de séries temporais SHARP do SDO/HMI, cruzadas com o catálogo DONKI da NASA.",
+  "projects.cme.role":
+    "Construí o pipeline completo: coleta e cruzamento dos dados (SWAN-SF + DONKI), pré-processamento das séries temporais, arquitetura biLSTM com atenção, validação com GroupKFold por HARPNUM e métrica TSS.",
+  "projects.cme.repoSuffix": ": previsão de CMEs com deep learning",
+  "projects.metrics.title": "Métricas de código vs. esforço de correção de bugs",
+  "projects.metrics.meta": "Iniciação científica · UNICAMP · Resultados apresentados em out. 2026",
+  "projects.metrics.overview":
+    "Estudo da relação entre complexidade ciclomática, linhas de código e o esforço para corrigir bugs em repositórios open source do GitHub.",
+  "projects.metrics.role":
+    "Coletei dados via APIs REST e GraphQL do GitHub, realizei análise estatística com correlação de Spearman e teste de Kruskal-Wallis e apresentei os resultados em outubro de 2026.",
+  "projects.metrics.repoSuffix": ": métricas de código vs. esforço de correção de bugs",
+  "projects.prev": "Projetos anteriores",
+  "projects.next": "Próximos projetos",
   "projects.adopet.meta": "Disciplina SI700 (programação mobile), Unicamp · Equipe de 3 pessoas · Em andamento",
   "projects.adopet.overview":
     "App para adoção de cães e gatos, com autenticação, banco de dados e armazenamento de arquivos no Firebase.",

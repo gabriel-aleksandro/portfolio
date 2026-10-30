@@ -48,6 +48,29 @@ window.I18N.en = {
     "Analyzed how cyclomatic complexity and lines of code relate to bug-fix effort, using data collected from GitHub repositories through the REST and GraphQL APIs. Statistical analysis with Spearman correlation and Kruskal-Wallis tests.",
 
   "projects.title": "Projects",
+  "projects.solar.title": "Solar Weather Assistant",
+  "projects.solar.meta": "Personal project · GenAI / RAG · Live demo",
+  "projects.solar.overview":
+    "An AI assistant specialized in solar physics and space weather. Uses RAG (retrieval-augmented generation) with ChromaDB, LangChain and LLaMA to answer questions about solar flare and CME forecasting based on scientific papers.",
+  "projects.solar.role":
+    "Built the full RAG pipeline: document ingestion, vector search with ONNX embeddings, and response generation via the Groq API. Deployed on Render with memory optimization to fit within the free tier (512 MB).",
+  "projects.solar.demo": "Live demo",
+  "projects.cme.title": "CME prediction with deep learning",
+  "projects.cme.meta": "Undergraduate research · Unicamp/CNPq · Ongoing",
+  "projects.cme.overview":
+    "A bidirectional LSTM with attention for predicting coronal mass ejections (CMEs) from SDO/HMI SHARP time series, cross-matched with the NASA DONKI CME catalog.",
+  "projects.cme.role":
+    "Built the full pipeline: data collection and cross-matching (SWAN-SF + DONKI), time series preprocessing, biLSTM with attention architecture, GroupKFold validation by HARPNUM and TSS metric.",
+  "projects.cme.repoSuffix": ": CME prediction with deep learning",
+  "projects.metrics.title": "Code metrics vs. bug-fix effort",
+  "projects.metrics.meta": "Undergraduate research · Unicamp · Results presented Oct 2026",
+  "projects.metrics.overview":
+    "Study of how cyclomatic complexity and lines of code relate to bug-fix effort across open source GitHub repositories.",
+  "projects.metrics.role":
+    "Collected data via GitHub REST and GraphQL APIs, ran statistical analysis with Spearman correlation and Kruskal-Wallis tests, and presented the results in October 2026.",
+  "projects.metrics.repoSuffix": ": code metrics vs. bug-fix effort",
+  "projects.prev": "Previous projects",
+  "projects.next": "Next projects",
   "projects.adopet.meta": "SI700 Mobile Programming, Unicamp · Team of 3 · In progress",
   "projects.adopet.overview":
     "Mobile app for adopting dogs and cats, with Firebase handling authentication, the database and file storage.",
