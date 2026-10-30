@@ -21,7 +21,7 @@ window.I18N["pt-BR"] = {
   "hero.photoAlt": "Foto de Gabriel Aleksandro de Paula",
   "hero.role": "Estudante de Análise e Desenvolvimento de Sistemas na Unicamp",
   "hero.summary":
-    "Faço pesquisa em machine learning e desenvolvo apps mobile e web. Também automatizei toda a suíte de testes de regressão como estagiário de QA. Estou em busca de estágio em desenvolvimento de software ou dados.",
+    "Faço pesquisa em machine learning e desenvolvo apps mobile e web. Publiquei um assistente de IA com acesso público, automatizei pipelines de coleta de dados e usei LLMs para acelerar pesquisa e desenvolvimento. Estou em busca de estágio em desenvolvimento de software ou dados.",
   "hero.resume": "Currículo (PDF)",
   "hero.email": "E-mail",
 
@@ -29,8 +29,6 @@ window.I18N["pt-BR"] = {
   "resume.file": "Gabriel-Aleksandro-Curriculo-PT.pdf",
   "resume.lang": ", em português",
 
-  "label.overview": "Visão geral",
-  "label.role": "Minha atuação",
   "label.stack": "Tecnologias",
   "label.repo": "Repositório no GitHub",
 
@@ -51,37 +49,29 @@ window.I18N["pt-BR"] = {
   "projects.title": "Projetos",
   "projects.solar.title": "Solar Weather Assistant",
   "projects.solar.meta": "Projeto pessoal · GenAI / RAG · Deploy público",
-  "projects.solar.overview":
-    "Assistente de IA especializado em física solar e clima espacial. Usa RAG (retrieval-augmented generation) com ChromaDB, LangChain e um LLM via Groq para responder perguntas sobre previsão de flares e CMEs com base em artigos científicos.",
-  "projects.solar.role":
-    "Construí o pipeline RAG completo: ingestão de documentos, busca vetorial com embeddings via ONNX e geração de respostas com LLM. Otimizei o uso de memória para fazer o deploy no free tier do Render (512 MB) sem PyTorch.",
+  "projects.solar.desc":
+    "Chatbot RAG que responde perguntas sobre física solar e clima espacial. Construí o pipeline completo — ingestão de documentos, busca vetorial com ONNX e geração de respostas via Groq API — e otimizei o uso de memória para fazer deploy no free tier do Render (512 MB) sem PyTorch. Disponível em solar-weather-assistant.onrender.com.",
   "projects.solar.demo": "Demo ao vivo",
   "projects.cme.title": "Previsão de CMEs com deep learning",
   "projects.cme.meta": "Iniciação científica · UNICAMP/CNPq · Em andamento",
-  "projects.cme.overview":
-    "Rede LSTM bidirecional com mecanismo de atenção para prever ejeções de massa coronal (CMEs) a partir de séries temporais SHARP do SDO/HMI, cruzadas com o catálogo DONKI da NASA.",
-  "projects.cme.role":
-    "Construí o pipeline completo: coleta e cruzamento dos dados (SWAN-SF + DONKI), pré-processamento das séries temporais, arquitetura biLSTM com atenção, validação com GroupKFold por HARPNUM e métrica TSS. Usei o Claude para análises exploratórias prévias dos dados e para acelerar o desenvolvimento, testando hipóteses e apontando quais caminhos seguir com base nos resultados parciais.",
+  "projects.cme.desc":
+    "LSTM bidirecional com atenção para prever ejeções de massa coronal a partir de séries temporais SHARP do SDO/HMI (SWAN-SF, cruzado com DONKI/NASA). Usei o Claude para análises exploratórias e decisões de arquitetura. TSS de 0,78 no conjunto de teste (ensemble de 5 folds).",
   "projects.cme.repoSuffix": ": previsão de CMEs com deep learning",
   "projects.cme.hf": "Modelo no Hugging Face",
   "projects.metrics.title": "Métricas de código vs. esforço de correção de bugs",
   "projects.metrics.meta": "Iniciação científica · UNICAMP · Resultados apresentados em out. 2026",
-  "projects.metrics.overview":
-    "Estudo da relação entre complexidade ciclomática, linhas de código e o esforço para corrigir bugs em repositórios open source do GitHub.",
-  "projects.metrics.role":
-    "Coletei dados via APIs REST e GraphQL do GitHub, realizei análise estatística com correlação de Spearman e teste de Kruskal-Wallis e apresentei os resultados em outubro de 2026.",
+  "projects.metrics.desc":
+    "Automatizei a coleta de dados de correção de bugs em repositórios do GitHub via APIs REST e GraphQL e analisei a relação entre complexidade ciclomática, linhas de código e esforço de correção com correlação de Spearman e teste de Kruskal-Wallis. Resultados apresentados na Unicamp em outubro de 2026.",
   "projects.metrics.repoSuffix": ": métricas de código vs. esforço de correção de bugs",
   "projects.prev": "Projetos anteriores",
   "projects.next": "Próximos projetos",
   "projects.adopet.meta": "Disciplina SI700 (programação mobile), Unicamp · Equipe de 3 pessoas · Em andamento",
-  "projects.adopet.overview":
-    "App para adoção de cães e gatos, com autenticação, banco de dados e armazenamento de arquivos no Firebase.",
-  "projects.adopet.role": "Desenvolvi todas as telas e interações do app até agora.",
+  "projects.adopet.desc":
+    "App mobile de adoção de cães e gatos feito com Flutter e Firebase para a disciplina SI700 da Unicamp. Implementei autenticação, banco de dados no Firestore e armazenamento de arquivos. Desenvolvi todas as telas e interações.",
   "projects.memory.title": "Jogo da memória para web",
   "projects.memory.meta": "Disciplina SI401B (programação web), Unicamp · Projeto final · Equipe de 3 pessoas",
-  "projects.memory.overview":
-    "Jogo da memória que roda no navegador, com visual inspirado no Bloons TD 6.",
-  "projects.memory.role": "Desenvolvimento front-end: fiz a maior parte das páginas e animações do site.",
+  "projects.memory.desc":
+    "Jogo da memória para o navegador com visual inspirado no Bloons TD 6, feito para a disciplina SI401B da Unicamp. Responsável pela maior parte das páginas e animações do front-end.",
   "projects.memory.repoSuffix": ": jogo da memória para web",
 
   "experience.title": "Experiência",

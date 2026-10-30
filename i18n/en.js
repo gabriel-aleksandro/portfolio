@@ -21,7 +21,7 @@ window.I18N.en = {
   "hero.photoAlt": "Photo of Gabriel Aleksandro de Paula",
   "hero.role": "Systems Analysis and Development student at Unicamp",
   "hero.summary":
-    "I do machine learning research and build mobile and web apps. I also automated a full regression test suite as a QA intern. I'm looking for internships in software development or data.",
+    "I do machine learning research and build mobile and web apps. I deployed an AI assistant used publicly, automated data collection pipelines, and used LLMs to accelerate research and development. I'm looking for internships in software development or data.",
   "hero.resume": "Resume (PDF)",
   "hero.email": "Email",
 
@@ -29,8 +29,6 @@ window.I18N.en = {
   "resume.file": "Gabriel-Aleksandro-Resume-EN.pdf",
   "resume.lang": ", English",
 
-  "label.overview": "Overview",
-  "label.role": "My role",
   "label.stack": "Stack",
   "label.repo": "Repository on GitHub",
 
@@ -51,37 +49,29 @@ window.I18N.en = {
   "projects.title": "Projects",
   "projects.solar.title": "Solar Weather Assistant",
   "projects.solar.meta": "Personal project · GenAI / RAG · Live demo",
-  "projects.solar.overview":
-    "An AI assistant specialized in solar physics and space weather. Uses RAG (retrieval-augmented generation) with ChromaDB, LangChain and an LLM via Groq to answer questions about solar flare and CME forecasting based on scientific papers.",
-  "projects.solar.role":
-    "Built the full RAG pipeline: document ingestion, vector search with ONNX embeddings, and LLM-based response generation. Optimized memory usage to deploy on Render's free tier (512 MB) without PyTorch.",
+  "projects.solar.desc":
+    "RAG chatbot that answers questions about solar physics and space weather. Built the full pipeline — document ingestion, ONNX vector search, and LLM response via Groq API — and optimized memory to deploy on Render’s free tier (512 MB) without PyTorch. Live at solar-weather-assistant.onrender.com.",
   "projects.solar.demo": "Live demo",
   "projects.cme.title": "CME prediction with deep learning",
   "projects.cme.meta": "Undergraduate research · Unicamp/CNPq · Ongoing",
-  "projects.cme.overview":
-    "A bidirectional LSTM with attention for predicting coronal mass ejections (CMEs) from SDO/HMI SHARP time series, cross-matched with the NASA DONKI CME catalog.",
-  "projects.cme.role":
-    "Built the full pipeline: data collection and cross-matching (SWAN-SF + DONKI), time series preprocessing, biLSTM with attention architecture, GroupKFold validation by HARPNUM and TSS metric. Used Claude for exploratory data analysis and to speed up development by testing hypotheses and identifying which directions to pursue based on partial results.",
+  "projects.cme.desc":
+    "Bidirectional LSTM with attention to predict coronal mass ejections from SDO/HMI SHARP time series (SWAN-SF dataset, cross-matched with NASA DONKI). Used Claude for exploratory analysis and architecture decisions. TSS of 0.78 on the test set (5-fold ensemble).",
   "projects.cme.repoSuffix": ": CME prediction with deep learning",
   "projects.cme.hf": "Model on Hugging Face",
   "projects.metrics.title": "Code metrics vs. bug-fix effort",
   "projects.metrics.meta": "Undergraduate research · Unicamp · Results presented Oct 2026",
-  "projects.metrics.overview":
-    "Study of how cyclomatic complexity and lines of code relate to bug-fix effort across open source GitHub repositories.",
-  "projects.metrics.role":
-    "Collected data via GitHub REST and GraphQL APIs, ran statistical analysis with Spearman correlation and Kruskal-Wallis tests, and presented the results in October 2026.",
+  "projects.metrics.desc":
+    "Automated collection of bug-fix data from GitHub repositories via REST and GraphQL APIs, then analyzed how cyclomatic complexity and lines of code relate to fix effort using Spearman correlation and Kruskal-Wallis tests. Results presented at Unicamp in October 2026.",
   "projects.metrics.repoSuffix": ": code metrics vs. bug-fix effort",
   "projects.prev": "Previous projects",
   "projects.next": "Next projects",
   "projects.adopet.meta": "SI700 Mobile Programming, Unicamp · Team of 3 · In progress",
-  "projects.adopet.overview":
-    "Mobile app for adopting dogs and cats, with Firebase handling authentication, the database and file storage.",
-  "projects.adopet.role": "Built all of the app's screens and user interactions so far.",
+  "projects.adopet.desc":
+    "Mobile app for dog and cat adoption built with Flutter and Firebase for a university course (SI700). Handled authentication, Firestore database and file storage. Built all screens and interactions.",
   "projects.memory.title": "Memory game for the web",
   "projects.memory.meta": "SI401B Web Programming, Unicamp · Final project · Team of 3",
-  "projects.memory.overview":
-    "A memory game that runs in the browser, with a visual theme inspired by Bloons TD 6.",
-  "projects.memory.role": "Front-end development: built most of the site's pages and animations.",
+  "projects.memory.desc":
+    "Browser memory game with a Bloons TD 6 visual theme, built for a web programming course (SI401B). Responsible for most of the front-end pages and animations.",
   "projects.memory.repoSuffix": ": memory game for the web",
 
   "experience.title": "Experience",
