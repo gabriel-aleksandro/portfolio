@@ -41,6 +41,7 @@ window.I18N["pt-BR"] = {
   "research.cme.advisor": "Orientador: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
     "Rede LSTM bidirecional com mecanismo de atenção, treinada com séries temporais SHARP do SDO/HMI (base SWAN-SF) e cruzadas com o catálogo de CMEs DONKI, da NASA.",
+  "research.cme.hf": "Modelo no Hugging Face",
   "research.bug.title": "Métricas de código e esforço de correção de bugs",
   "research.bug.meta": "Resultados apresentados em outubro de 2026",
   "research.bug.advisor": "Orientadores: Prof. Dr. Plinio Vilela e Prof. Dr. Pedro Ivo",
@@ -62,6 +63,7 @@ window.I18N["pt-BR"] = {
   "projects.cme.role":
     "Construí o pipeline completo: coleta e cruzamento dos dados (SWAN-SF + DONKI), pré-processamento das séries temporais, arquitetura biLSTM com atenção, validação com GroupKFold por HARPNUM e métrica TSS.",
   "projects.cme.repoSuffix": ": previsão de CMEs com deep learning",
+  "projects.cme.hf": "Modelo no Hugging Face",
   "projects.metrics.title": "Métricas de código vs. esforço de correção de bugs",
   "projects.metrics.meta": "Iniciação científica · UNICAMP · Resultados apresentados em out. 2026",
   "projects.metrics.overview":

@@ -41,6 +41,7 @@ window.I18N.en = {
   "research.cme.advisor": "Advisor: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
     "A bidirectional LSTM with attention trained on SDO/HMI SHARP time series from the SWAN-SF dataset, cross-matched with the NASA DONKI CME catalog.",
+  "research.cme.hf": "Model on Hugging Face",
   "research.bug.title": "Code metrics vs. bug-fix effort",
   "research.bug.meta": "Results presented in October 2026",
   "research.bug.advisor": "Advisors: Prof. Dr. Plinio Vilela and Prof. Dr. Pedro Ivo",
@@ -62,6 +63,7 @@ window.I18N.en = {
   "projects.cme.role":
     "Built the full pipeline: data collection and cross-matching (SWAN-SF + DONKI), time series preprocessing, biLSTM with attention architecture, GroupKFold validation by HARPNUM and TSS metric.",
   "projects.cme.repoSuffix": ": CME prediction with deep learning",
+  "projects.cme.hf": "Model on Hugging Face",
   "projects.metrics.title": "Code metrics vs. bug-fix effort",
   "projects.metrics.meta": "Undergraduate research · Unicamp · Results presented Oct 2026",
   "projects.metrics.overview":
