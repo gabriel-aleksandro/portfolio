@@ -40,7 +40,7 @@ window.I18N["pt-BR"] = {
   "research.cme.meta": "Em andamento · Artigo em preparação",
   "research.cme.advisor": "Orientador: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
-    "Rede LSTM bidirecional com mecanismo de atenção, treinada com séries temporais SHARP do SDO/HMI (base SWAN-SF) e cruzadas com o catálogo de CMEs DONKI, da NASA.",
+    "Rede LSTM bidirecional com mecanismo de atenção, treinada com séries temporais SHARP do SDO/HMI (base SWAN-SF) e cruzadas com o catálogo de CMEs DONKI, da NASA. TSS de 0,78 no conjunto de teste (ensemble de 5 folds). O Claude foi usado como parceiro de análise exploratória: interpretar os dados antes do treino, sugerir caminhos com base nos resultados parciais e acelerar decisões de arquitetura e pipeline.",
   "research.cme.hf": "Modelo no Hugging Face",
   "research.bug.title": "Métricas de código e esforço de correção de bugs",
   "research.bug.meta": "Resultados apresentados em outubro de 2026",
@@ -52,16 +52,16 @@ window.I18N["pt-BR"] = {
   "projects.solar.title": "Solar Weather Assistant",
   "projects.solar.meta": "Projeto pessoal · GenAI / RAG · Deploy público",
   "projects.solar.overview":
-    "Assistente de IA especializado em física solar e clima espacial. Usa RAG (retrieval-augmented generation) com ChromaDB, LangChain e LLaMA para responder perguntas sobre previsão de flares e CMEs com base em artigos científicos.",
+    "Assistente de IA especializado em física solar e clima espacial. Usa RAG (retrieval-augmented generation) com ChromaDB, LangChain e um LLM via Groq para responder perguntas sobre previsão de flares e CMEs com base em artigos científicos.",
   "projects.solar.role":
-    "Desenvolvi o pipeline RAG completo: ingestão de documentos, busca vetorial com embeddings ONNX e geração de respostas via API Groq. Deploy no Render com otimização de memória para caber no free tier (512 MB).",
+    "Construí o pipeline RAG completo: ingestão de documentos, busca vetorial com embeddings via ONNX e geração de respostas com LLM. Otimizei o uso de memória para fazer o deploy no free tier do Render (512 MB) sem PyTorch.",
   "projects.solar.demo": "Demo ao vivo",
   "projects.cme.title": "Previsão de CMEs com deep learning",
   "projects.cme.meta": "Iniciação científica · UNICAMP/CNPq · Em andamento",
   "projects.cme.overview":
     "Rede LSTM bidirecional com mecanismo de atenção para prever ejeções de massa coronal (CMEs) a partir de séries temporais SHARP do SDO/HMI, cruzadas com o catálogo DONKI da NASA.",
   "projects.cme.role":
-    "Construí o pipeline completo: coleta e cruzamento dos dados (SWAN-SF + DONKI), pré-processamento das séries temporais, arquitetura biLSTM com atenção, validação com GroupKFold por HARPNUM e métrica TSS.",
+    "Construí o pipeline completo: coleta e cruzamento dos dados (SWAN-SF + DONKI), pré-processamento das séries temporais, arquitetura biLSTM com atenção, validação com GroupKFold por HARPNUM e métrica TSS. Usei o Claude para análises exploratórias prévias dos dados e para acelerar o desenvolvimento, testando hipóteses e apontando quais caminhos seguir com base nos resultados parciais.",
   "projects.cme.repoSuffix": ": previsão de CMEs com deep learning",
   "projects.cme.hf": "Modelo no Hugging Face",
   "projects.metrics.title": "Métricas de código vs. esforço de correção de bugs",

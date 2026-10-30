@@ -40,7 +40,7 @@ window.I18N.en = {
   "research.cme.meta": "Ongoing · Article in preparation",
   "research.cme.advisor": "Advisor: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
-    "A bidirectional LSTM with attention trained on SDO/HMI SHARP time series from the SWAN-SF dataset, cross-matched with the NASA DONKI CME catalog.",
+    "A bidirectional LSTM with attention trained on SDO/HMI SHARP time series from the SWAN-SF dataset, cross-matched with the NASA DONKI CME catalog. TSS of 0.78 on the test set (5-fold ensemble). Claude was used as an exploratory analysis partner: interpreting data before training, suggesting directions based on partial results, and accelerating architecture and pipeline decisions.",
   "research.cme.hf": "Model on Hugging Face",
   "research.bug.title": "Code metrics vs. bug-fix effort",
   "research.bug.meta": "Results presented in October 2026",
@@ -52,16 +52,16 @@ window.I18N.en = {
   "projects.solar.title": "Solar Weather Assistant",
   "projects.solar.meta": "Personal project · GenAI / RAG · Live demo",
   "projects.solar.overview":
-    "An AI assistant specialized in solar physics and space weather. Uses RAG (retrieval-augmented generation) with ChromaDB, LangChain and LLaMA to answer questions about solar flare and CME forecasting based on scientific papers.",
+    "An AI assistant specialized in solar physics and space weather. Uses RAG (retrieval-augmented generation) with ChromaDB, LangChain and an LLM via Groq to answer questions about solar flare and CME forecasting based on scientific papers.",
   "projects.solar.role":
-    "Built the full RAG pipeline: document ingestion, vector search with ONNX embeddings, and response generation via the Groq API. Deployed on Render with memory optimization to fit within the free tier (512 MB).",
+    "Built the full RAG pipeline: document ingestion, vector search with ONNX embeddings, and LLM-based response generation. Optimized memory usage to deploy on Render's free tier (512 MB) without PyTorch.",
   "projects.solar.demo": "Live demo",
   "projects.cme.title": "CME prediction with deep learning",
   "projects.cme.meta": "Undergraduate research · Unicamp/CNPq · Ongoing",
   "projects.cme.overview":
     "A bidirectional LSTM with attention for predicting coronal mass ejections (CMEs) from SDO/HMI SHARP time series, cross-matched with the NASA DONKI CME catalog.",
   "projects.cme.role":
-    "Built the full pipeline: data collection and cross-matching (SWAN-SF + DONKI), time series preprocessing, biLSTM with attention architecture, GroupKFold validation by HARPNUM and TSS metric.",
+    "Built the full pipeline: data collection and cross-matching (SWAN-SF + DONKI), time series preprocessing, biLSTM with attention architecture, GroupKFold validation by HARPNUM and TSS metric. Used Claude for exploratory data analysis and to speed up development by testing hypotheses and identifying which directions to pursue based on partial results.",
   "projects.cme.repoSuffix": ": CME prediction with deep learning",
   "projects.cme.hf": "Model on Hugging Face",
   "projects.metrics.title": "Code metrics vs. bug-fix effort",
