@@ -38,7 +38,7 @@ window.I18N.en = {
   "research.cme.meta": "Ongoing · Article in preparation",
   "research.cme.advisor": "Advisor: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
-    "A bidirectional LSTM with attention trained on SDO/HMI SHARP time series from the SWAN-SF dataset, cross-matched with the NASA DONKI CME catalog. TSS of 0.78 on the test set (5-fold ensemble). Claude was used as an exploratory analysis partner: interpreting data before training, suggesting directions based on partial results, and accelerating architecture and pipeline decisions.",
+    "A bidirectional LSTM with attention trained on SDO/HMI SHARP time series from the SWAN-SF dataset. The work covers two tasks: solar flare prediction — TSS of 0.78 on the test set (5-fold ensemble), with a model published on Hugging Face — and CME prediction, cross-matched with the NASA DONKI catalog, which is still ongoing. Claude was used to explore hypotheses, interpret partial results, and inform pipeline decisions.",
   "research.cme.hf": "Model on Hugging Face",
   "research.bug.title": "Code metrics vs. bug-fix effort",
   "research.bug.meta": "Results presented in October 2026",
@@ -55,9 +55,8 @@ window.I18N.en = {
   "projects.cme.title": "CME prediction with deep learning",
   "projects.cme.meta": "Undergraduate research · Unicamp/CNPq · Ongoing",
   "projects.cme.desc":
-    "Bidirectional LSTM with attention to predict coronal mass ejections from SDO/HMI SHARP time series (SWAN-SF dataset, cross-matched with NASA DONKI). Used Claude for exploratory analysis and architecture decisions. TSS of 0.78 on the test set (5-fold ensemble).",
+    "Bidirectional LSTM with attention to predict coronal mass ejections from SDO/HMI SHARP time series (SWAN-SF, cross-matched with NASA DONKI). The same repository also covers solar flare prediction, achieving TSS of 0.78 on the test set (5-fold ensemble). Used Claude to explore hypotheses, interpret partial results, and inform pipeline decisions.",
   "projects.cme.repoSuffix": ": CME prediction with deep learning",
-  "projects.cme.hf": "Model on Hugging Face",
   "projects.metrics.title": "Code metrics vs. bug-fix effort",
   "projects.metrics.meta": "Undergraduate research · Unicamp · Results presented Oct 2026",
   "projects.metrics.desc":

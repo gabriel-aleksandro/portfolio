@@ -38,7 +38,7 @@ window.I18N["pt-BR"] = {
   "research.cme.meta": "Em andamento · Artigo em preparação",
   "research.cme.advisor": "Orientador: Prof. Dr. Andre Leon S. Gradvohl",
   "research.cme.desc":
-    "Rede LSTM bidirecional com mecanismo de atenção, treinada com séries temporais SHARP do SDO/HMI (base SWAN-SF) e cruzadas com o catálogo de CMEs DONKI, da NASA. TSS de 0,78 no conjunto de teste (ensemble de 5 folds). O Claude foi usado como parceiro de análise exploratória: interpretar os dados antes do treino, sugerir caminhos com base nos resultados parciais e acelerar decisões de arquitetura e pipeline.",
+    "Rede LSTM bidirecional com mecanismo de atenção, treinada com séries temporais SHARP do SDO/HMI (base SWAN-SF). O trabalho cobre duas tarefas: previsão de flares solares — com TSS de 0,78 no conjunto de teste (ensemble de 5 folds) e modelo publicado no Hugging Face — e previsão de CMEs, cruzando a base com o catálogo DONKI/NASA, ainda em andamento. O Claude foi usado para explorar hipóteses, interpretar resultados parciais e embasar decisões de pipeline.",
   "research.cme.hf": "Modelo no Hugging Face",
   "research.bug.title": "Métricas de código e esforço de correção de bugs",
   "research.bug.meta": "Resultados apresentados em outubro de 2026",
@@ -55,9 +55,8 @@ window.I18N["pt-BR"] = {
   "projects.cme.title": "Previsão de CMEs com deep learning",
   "projects.cme.meta": "Iniciação científica · UNICAMP/CNPq · Em andamento",
   "projects.cme.desc":
-    "LSTM bidirecional com atenção para prever ejeções de massa coronal a partir de séries temporais SHARP do SDO/HMI (SWAN-SF, cruzado com DONKI/NASA). Usei o Claude para análises exploratórias e decisões de arquitetura. TSS de 0,78 no conjunto de teste (ensemble de 5 folds).",
+    "LSTM bidirecional com atenção para prever ejeções de massa coronal a partir de séries temporais SHARP do SDO/HMI (SWAN-SF, cruzado com DONKI/NASA). O mesmo repositório cobre também a previsão de flares solares, com TSS de 0,78 no conjunto de teste (ensemble de 5 folds). Usei o Claude para explorar hipóteses, interpretar resultados parciais e embasar decisões de pipeline.",
   "projects.cme.repoSuffix": ": previsão de CMEs com deep learning",
-  "projects.cme.hf": "Modelo no Hugging Face",
   "projects.metrics.title": "Métricas de código vs. esforço de correção de bugs",
   "projects.metrics.meta": "Iniciação científica · UNICAMP · Resultados apresentados em out. 2026",
   "projects.metrics.desc":
