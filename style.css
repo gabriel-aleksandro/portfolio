@@ -700,7 +700,7 @@ section {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: min(380px, 90vw);
-  align-items: start;
+  align-items: stretch;
   gap: var(--space-5);
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -709,7 +709,9 @@ section {
   padding-bottom: var(--space-3);
 }
 
+/* Equal heights; .card is already a flex column and .btn-repo's margin-top: auto pins the buttons to the bottom */
 .carousel > .card {
+  height: 100%;
   scroll-snap-align: start;
 }
 
