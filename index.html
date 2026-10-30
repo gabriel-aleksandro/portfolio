@@ -181,18 +181,14 @@
 
       <section id="projects" class="reveal" aria-labelledby="projects-title">
         <div class="container">
-          <header class="section-head carousel-head">
+          <header class="section-head">
             <h2 id="projects-title" data-i18n="projects.title"></h2>
-            <div class="carousel-nav">
-              <button type="button" class="carousel-btn" data-dir="-1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.prev">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-              </button>
-              <button type="button" class="carousel-btn" data-dir="1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.next">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-              </button>
-            </div>
           </header>
 
+          <div class="carousel-wrap">
+          <button type="button" class="carousel-btn carousel-prev" data-dir="-1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.prev">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
           <div class="carousel" id="projects-track">
             <article class="card">
               <p class="badge" data-i18n="projects.solar.meta"></p>
@@ -331,6 +327,10 @@
                 <span data-i18n="label.repo"></span><span class="visually-hidden" data-i18n="projects.memory.repoSuffix"></span>
               </a>
             </article>
+          </div>
+          <button type="button" class="carousel-btn carousel-next" data-dir="1" aria-controls="projects-track" data-i18n-attr="aria-label:projects.next">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
           </div>
         </div>
       </section>

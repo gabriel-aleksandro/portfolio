@@ -114,6 +114,43 @@ carouselBtns.forEach(btn => btn.addEventListener('click', () => {
     track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth });
 }));
 
+// Mouse drag (touch already scrolls natively). Move/up listen on window so
+// releasing outside the track still ends the drag.
+let drag = null;
+
+track.addEventListener('mousedown', e => {
+    if (e.button !== 0) return;
+    drag = { x: e.clientX, left: track.scrollLeft, moved: false };
+});
+
+window.addEventListener('mousemove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    // A few pixels of slack so ordinary clicks on links and text still work
+    if (!drag.moved && Math.abs(dx) < 5) return;
+    if (!drag.moved) {
+        drag.moved = true;
+        track.classList.add('is-dragging');
+        getSelection().removeAllRanges();
+    }
+    e.preventDefault();
+    track.scrollLeft = drag.left - dx;
+});
+
+window.addEventListener('mouseup', e => {
+    if (!drag) return;
+    if (drag.moved) track.classList.remove('is-dragging');
+    // Swallow the click that follows a drag so releasing on a link doesn't open it
+    // (only fires if released inside the track, so only listen then)
+    if (drag.moved && track.contains(e.target)) {
+        track.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); }, { capture: true, once: true });
+    }
+    drag = null;
+});
+
+// Links and images start a native drag-and-drop on mousedown, which would hijack ours
+track.addEventListener('dragstart', e => e.preventDefault());
+
 track.addEventListener('scroll', updateCarousel, { passive: true });
 window.addEventListener('resize', updateCarousel);
 updateCarousel();

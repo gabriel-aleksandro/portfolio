@@ -633,34 +633,51 @@ section {
 }
 
 /* ── PROJECTS CAROUSEL ── */
-.carousel-head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--space-4);
+.carousel-wrap {
+  position: relative;
 }
 
 /* Arrows need script.js; without it the track still scrolls natively */
-.carousel-nav {
-  display: none;
-  gap: var(--space-2);
-}
-
-.js .carousel-nav {
-  display: flex;
-}
-
 .carousel-btn {
-  display: inline-grid;
-  place-items: center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  translate: 0 -50%;
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface);
   color: var(--text);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.js .carousel-btn {
+  display: grid;
+  place-items: center;
+}
+
+/* Small screens: overlap the card edges; there's no room beside the track */
+.carousel-prev {
+  left: -0.5rem;
+}
+
+.carousel-next {
+  right: -0.5rem;
+}
+
+/* Wide screens: content width + room for both arrows outside the track */
+@media (min-width: 72rem) {
+  .carousel-prev {
+    left: calc(-2.75rem - var(--space-4));
+  }
+
+  .carousel-next {
+    right: calc(-2.75rem - var(--space-4));
+  }
 }
 
 .carousel-btn:hover:not([aria-disabled="true"]) {
@@ -668,9 +685,13 @@ section {
   color: var(--accent);
 }
 
+/* Dim only the icon so the button stays opaque over card text */
 .carousel-btn[aria-disabled="true"] {
-  opacity: 0.4;
   cursor: default;
+}
+
+.carousel-btn[aria-disabled="true"] .icon {
+  opacity: 0.3;
 }
 
 /* position: relative so .visually-hidden spans in off-screen cards are clipped instead of widening the page */
@@ -678,7 +699,8 @@ section {
   position: relative;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 100%;
+  grid-auto-columns: min(380px, 90vw);
+  align-items: start;
   gap: var(--space-5);
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -691,16 +713,18 @@ section {
   scroll-snap-align: start;
 }
 
-@media (min-width: 48rem) {
+@media (hover: hover) and (pointer: fine) {
   .carousel {
-    grid-auto-columns: calc((100% - var(--space-5)) / 2);
+    cursor: grab;
   }
 }
 
-@media (min-width: 64rem) {
-  .carousel {
-    grid-auto-columns: calc((100% - 2 * var(--space-5)) / 3);
-  }
+/* Snapping would fight the drag, so it's paused until the mouse is released */
+.carousel.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 
 /* ── EXPERIENCE ── */
